@@ -64,6 +64,17 @@ p.text_white {
     color:#fff
 }
 
+p.subtitle{
+    font-family: Nuntio, sans-serif;
+    font-size: 1.1em;
+    color: #515151;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: -1em;
+
+}
+
+
 a{
     text-decoration: underline;
     color: #070707
@@ -157,6 +168,10 @@ h2 a {
 
 }
 
+.btn_dark:hover{
+    opacity: 0.8
+}
+
 .btn_dark a{
     color: #fff;
     text-transform: uppercase;
@@ -173,51 +188,49 @@ header {
     position: fixed;
     background-color: #fff;
     width: 100%;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    /* padding-bottom: 1em; */
     box-shadow: 1px 2px 10px #00000059;
-    z-index: 1;
+    z-index: 3;
 }
 
 .nav_wrapper {
     display: flex;
-    flex-direction:row;
+    flex-direction:column;
     justify-content: space-between;
     padding-right:1em;
     padding-left: 1em;
 }
 
-header img {
+img#logo {
     align-self: center;
-    width: 150px
+    width: 150px;
+    margin-top: .5em;
 }
 
-
 nav ul {
-    text-align: right;
+    display: flex;
+    flex-direction:row; 
     padding-top: .5em;
     padding-left: 0px;
-    width: 120px;
     margin-block-end: 0px;
-} 
-
-nav ul li {
-    margin-bottom: 2px
-} 
+    justify-content: space-between;
+}
 
 nav a {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding-right:.5em;
-    font-weight: 500
+    font-weight: 500;
+}
 
-
+nav li {
+    padding-bottom: .5em;
+    margin-bottom: 0
 }
 
 li.selected{
-    background-color: #F4F4F4;
-    border-left: 5px solid #006666
+    /* background-color: #F4F4F4; */
+    border-bottom: 5px solid #006666
 }
 
 li.selected a {
@@ -253,21 +266,36 @@ li.selected a {
 
   /*Form styles*/
 
-.form-wrapper {
+form{
     width: 100%;
+    background-color: #f4f4f4;
+    padding: .5em;
+    border-radius: 3px;
+    box-sizing: border-box;
 }  
-form input#first_name, input#last_name, input#email, input#message{
+
+fieldset {
+}
+
+form input[type=text], form input[type=email] {
     margin-bottom: 1em;
+    font-family: Nunito, sans-serif;
+    font-size: .9em;
     max-width: 100%;
     min-width: 100%;
-    height: 2em;
-    box-sizing: border-box
-
+    padding: 10px 5px;
+    box-sizing: border-box;
   }
 
-form input#message{
-    height:4em;
-    box-sizing: border-box
+form textarea{
+    margin-bottom: 1em;
+    font-family: Nunito, sans-serif;
+    font-size: .9em;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 10px 5px;
+    min-height: 150px;
+    box-sizing: border-box;
 }
 
 form input.btn_dark {
@@ -277,11 +305,10 @@ form input.btn_dark {
     font-family: "Roboto", sans-serif;
     font-size: 1em
  
-
 }
 
 form label {
-    font-family: nunito
+    font-family: "Nunito"
 }
 
   /*End form styles*/
@@ -340,6 +367,26 @@ div.gallery div:nth-child(even){
 
 }
 
+/* Start case study details page */
+
+div.persona-grid {
+    display:grid;
+    /* grid-template-columns: 1fr; */
+    grid-template-rows: auto;
+    row-gap: 1em;
+    margin-bottom: 2em;
+}
+
+
+div.persona-grid img{
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, .2);
+    max-width: 80%;
+    margin:auto;
+}
+
+/* End case study details page */
+
+
 
 /*End about page skills section*/
 
@@ -352,6 +399,7 @@ div.gallery div:nth-child(even){
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    padding: 2em;
     /* clear: both;
     margin-bottom: 200px */
 }
@@ -360,6 +408,84 @@ header img {
     width: 225px;
     }
 
+/* Case study detail pages  */    
+div.solution-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    row-gap: 2em;
+}    
+
+p.solution-intro {
+    grid-column: 1/3;
+}
+
+div.solution-grid > h2 {
+    grid-column: 1/3
+}
+
+div.feature-text-1, div.feature-text-3 {
+    grid-column: 1/2
+}
+
+div.feature-text-1, div.feature-text-3 {
+    grid-column: 1/2
+}
+
+div.feature-text-2 {
+    grid-column: 2/3;
+    padding-left: 1em
+}
+
+img.feature-image-2 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin-top: 0em;
+    max-height: 400px;
+    /* justify-self: center; */
+    /* align-self: center */
+
+}
+
+img.feature-image-1, img.feature-image-3 {
+    margin-top: 0em;
+    max-height: 400px;
+    justify-self: center;
+    grid-column: 2/3;
+}
+
+
+/* END case study detail pages  */  
+
+/*Start persona cards*/
+div.persona-grid {
+    display:grid;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-rows: auto;
+    column-gap: 1em;
+}
+
+div.persona-grid img{
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, .2);
+    max-width: 100%;
+}
+
+img.persona-1 {
+    grid-column: 1/2
+}
+
+img.persona-2 {
+    grid-column: 2/3
+}
+
+img.persona-3 {
+    grid-column: 3/4
+}
+
+
+/*End persona cards*/
+
+
 
 div.gallery{
     display: grid;
@@ -367,7 +493,6 @@ div.gallery{
     grid-template-rows: auto;
     gap: 2em;
 }
-
 
 div.gallery div:nth-child(odd){
     background-color: #f4f4f4;
@@ -385,7 +510,17 @@ div.gallery div:nth-child(even){
 }
 
 
+/*Contact form*/
+form{
+    width: 70%;
+    padding: 2em;
+}
 
+form input.btn_dark {
+    /* max-width: 0px; */
+    width: 50%;
+    padding: 10px 10px;
+    margin-left: 50%;
 }
 
 /*End tablet styles*/
@@ -399,6 +534,7 @@ body{
     scroll-behavior: smooth;
     font-size:20px;
 }
+
 
 #main-content {
     top: 200px;
@@ -421,14 +557,15 @@ header {
 
 .nav_wrapper {
     display: flex;
-    padding-right:1em;
-    padding-left: 1em;
+    padding-right:2em;
+    padding-left: 2em;
 
 }
 
-header img {
+header img#logo {
     width: 300px;
-    margin-bottom:1em;
+    margin-top: .2em;
+    margin-bottom:.2em;
     }
 
 img#logo {
