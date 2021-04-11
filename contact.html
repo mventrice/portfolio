@@ -14,7 +14,7 @@
         <header>
             <a class ="skip" href="#main-content">Skip to Main Content</a>
             <div class="nav_wrapper">
-            <img src="images/logo-mariele-ventrice.svg" alt="cursive logo" width="100px">
+            <img src="images/logo-mariele-ventrice.svg" alt="cursive logo" width="100px" id="logo">
             <nav>
                 <ul class="nav_links">
                     <li><a href="index.html">Projects</a></li>
@@ -28,18 +28,20 @@
 <main id="main-content">
     <h1>Contact</h1>
     <p>Fill out the form below to get in touch!</p>
-    <div class ="form-wrapper">
-    <form>
+    <form action="https://formspree.io/f/xzbybwdz" method="POST">
+        <fieldset>
         <label for="first_name">First name:</label><br>
         <input type="text" id="first_name" name="first_name"><br>
         <label for="last_name">Last name:</label><br>
         <input type="text" id="last_name" name="last_name"><br>
         <label for="email">Email Address:</label><br>
-        <input type="text" id="email" name="email"><br>
+        <input type="email" id="email" name="email"><br>
         <label for="message">Your message:</label><br>
-        <input type="text" id="message" name="message"><br>
-        <input class="btn_dark" type="button" value="Submit" >
-    </form>
+        <textarea id="message" name="message"></textarea><br>
+        </fieldset>
+
+        <input class="btn_dark" type="submit" value="Submit" >
+</form>
 </div>
 
 </main>
@@ -47,5 +49,6 @@
     <a href="contact.html"><button class="btn_light">Contact</button></a> 
     <p class="text_white">© Mariele Ventrice, 2021</p>
 </footer>
+<script type="text/javascript" src='js/menu.js'></script>
 </body>
 </html>
