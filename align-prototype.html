@@ -14,7 +14,7 @@
 <header>
     <a class = "skip" href="#main-content"   >Skip to Main Content</a>
     <div class="nav_wrapper">
-    <img src="images/logo-mariele-ventrice.svg" alt="cursive logo" width="100px">
+    <img src="images/logo-mariele-ventrice.svg" alt="logo" id="logo">
     <nav>
         <ul class="nav_links">
             <li><a href="index.html">Projects</a></li>
@@ -27,7 +27,7 @@
 </header>
     <main id="main-content">
         <h1>Align Mental Health App</h1>
-            <p>Course project</p> <!--style as subtitle-->
+            <p class="subtitle">Course project for SI582</p> <!--style as subtitle-->
         <section>
         <h2>Overview</h2>
         <p>Summary: Designed and prototyped a mental health care provider and resource “matching” app designed for intersectionality.</p>
@@ -48,19 +48,28 @@
                 <li>Meet patients where they are by providing a personalized in-app experience.</li>
             </ol>
         </section>
-        <section>
+        <div class="body-content-wrapper">
+        <section class="solution">
             <h2>Solution</h2>
-            <p>Align is an easy-to-use, secure mobile application that helps users find providers who are good cultural matches while offering guidance throughout the process. The app consolidates the many steps of finding a provider (e.g. discovering the best type of therapy for one’s needs, determining payment options, finding trustworthy reviews, making contact with the provider) in one inclusive and private platform.</p>
+            <p class="solution-intro">Align is an easy-to-use, secure mobile application that helps users find providers who are good cultural matches while offering guidance throughout the process. The app consolidates the many steps of finding a provider (e.g. discovering the best type of therapy for one’s needs, determining payment options, finding trustworthy reviews, making contact with the provider) in one inclusive and private platform.</p>
             <h3>Core Features</h3>
+            <div class="solution-grid">
+            <div class="feature-text-1">
             <h4>Align Assessment for provider matching</h4>
             <p>Assessment “matching” service asks 10 simple questions to help the user find a provider that has a deep understanding of their lived experiences. The optional assessment questions evaluate provider-patient match and eliminate the need for the user to have in-depth knowledge of therapeutic modalities.</p>
-            <img src="images/align-assessment-.png" alt="">
+            </div>
+            <img class="feature-image-1" src= "images/align-assessment-.png" alt="">
+            <div class="feature-text-2">
             <h4>Ranked matches and comprehensive provider profiles</h4>
             <p>Assessment results include a ranked list of providers (with map view option). Each provider has a calculated match percentage, reviews from other verified users, an in-depth profile and contact options.</p>
-            <img src="images/results-and-provider-profile.png" alt="">
+            </div>
+            <img class="feature-image-2" src="images/results-and-provider-profile.png" alt="">
+            <div class="feature-text-3">
             <h4>Flexible provider directory</h4>
             <p>Inclusive filter categories and open-ended keyword search option empower users and deliver fine-tuned results. The directory offers the user transparency into the full list of providers, building trust.        </p>
-            <img src="images/provider-results-assessment.png" alt="">
+            </div>
+            <img class="feature-image-3" src="images/provider-results-assessment.png" alt="">
+        </div>
         </section>
         <section>
             <h2>Process</h2>
@@ -78,10 +87,10 @@
             <p>We created an affinity map to synthesize the qualitative data from our interviews. At this point, we began creating personas and drafting user scenarios. 
             </p>
             <h4>Persona Cards</h4>
-            <div>
-            <img src="images/personas.jpg" alt="">
-            <img src="images/personas2.jpg" alt="">
-            <img src="images/personas3.jpg" alt="">
+            <div class="persona-grid">
+            <img class="persona-1" src="images/personas.jpg" alt="">
+            <img class="persona-2" src="images/personas2.jpg" alt="">
+            <img class="persona-3" src="images/personas3.jpg" alt="">
             </div>
             <h3>Develop</h3>
             <p>Our design went through a number of iterations, starting with paper sketches and user flow diagrams and progressing to wireframes and a full digital prototype. We conducted users tests on our paper and digital prototypes and completed feedback logs which we used to improve usability.
@@ -96,6 +105,7 @@
             <p>We developed a fully functional digital prototype in Adobe XD. This video shows the user flow for signing up, taking the assessment, and viewing provider results.</p>
 
         </section>
+    </div>
     </main>
     <footer>
 
@@ -104,4 +114,5 @@
     
     
     </footer>
+    <script type="text/javascript" src='js/menu.js'></script>
 </html>
