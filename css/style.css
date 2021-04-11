@@ -221,6 +221,7 @@ nav a {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 500;
+    font-size: .9em;
 }
 
 nav li {
@@ -404,9 +405,55 @@ div.persona-grid img{
     margin-bottom: 200px */
 }
 
+
+/*Tablet header styles*/
+
+.nav_wrapper {
+    flex-direction: row;
+    padding-bottom: .5em;
+    padding-top: .5em;
+    align-content: center;
+    padding-left:2em;
+    padding-right: 2em;
+}
+
+nav {
+    width:200px;
+    display: inline-block
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 1em;
+    margin-block-end: 0px;
+    } 
+
+nav li {
+    padding-bottom: 2px;
+    margin-bottom: 10px;
+}
+
+nav li a{
+    padding-left: 8px;
+}
+
+li.selected{
+    border-left: 3px solid #006666;
+    border-bottom: 0px
+}
+
+
+/*End tablet header styles*/
+
 header img {
     width: 225px;
     }
+
+img#logo {
+    padding-top: 0px;
+    margin-top: 0px
+}
 
 /* Case study detail pages  */    
 div.solution-grid {
@@ -522,7 +569,7 @@ form input.btn_dark {
     padding: 10px 10px;
     margin-left: 50%;
 }
-
+}
 /*End tablet styles*/
 
 
@@ -554,18 +601,23 @@ header {
     box-sizing: border-box
 }
 
+nav li {
+    margin-bottom: 0px
+}
 
 .nav_wrapper {
     display: flex;
-    padding-right:2em;
-    padding-left: 2em;
-
+    flex-direction: row;
+    padding-right:0em;
+    padding-left: 0em;
+    justify-content: space-between;
+    padding-bottom: 0em;
 }
 
 header img#logo {
     width: 300px;
-    margin-top: .2em;
-    margin-bottom:.2em;
+    margin-top: .4em;
+    margin-bottom:.4em;
     }
 
 img#logo {
@@ -574,6 +626,7 @@ img#logo {
 }
 
 nav {
+    width: 60%;
     align-self: flex-end;
     }
 
@@ -583,23 +636,24 @@ nav ul {
     flex-direction:row; 
     padding-top: .5em;
     padding-left: 0px;
-    width: 70%;
     margin-block-end: 0px;
 
 } 
-    
-nav ul li {
-    margin-bottom: 2px;
-    margin-right: 2em;
-    /* padding-right: 1em; */
-} 
 
-nav a {
+ul.nav_links {
+
+}
+
+
+
+nav li a {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 500;
     padding-right: 0;
+    padding-left: 0px;
+
 }
 
 li.selected{
