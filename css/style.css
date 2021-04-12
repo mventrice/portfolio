@@ -357,16 +357,12 @@ div.gallery div:nth-child(even){
 /*End gallery styles*/
 
 /*About page skills section*/
-.my_skills img {
-    width: 100px;
-    padding: 0;
-    margin:0
-}
-.my_skills div {
+
+/* .my_skills div {
     display: grid;
     grid-template-columns: 33% 66%;
 
-}
+} */
 
 /* Start case study details page */
 
@@ -390,6 +386,89 @@ div.persona-grid img{
 
 
 /*End about page skills section*/
+
+/*Start flip card styles*/
+
+div.my_skills {
+    display: grid
+}
+
+div.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    margin: 2em auto;
+  }
+
+div.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform .5s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+div.flip-card:hover div.flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+
+  div.flip-card-front, div.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  div.flip-card-front {
+    background-color: #C0D7D7;
+    /* background-image: url("../images/pexels-tim-mossholder-1764702.jpg");
+    background-size: 700px; */
+  }
+  
+  div.flip-card-back {
+    background-color: #006666;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+div.flip-card-back-content {
+    position: relative;
+    top: 25%;
+}
+
+div.flip-card-front-content {
+    padding: 2em 1em;
+    text-align: center;
+}
+
+div.flip-card-front-content > h3{
+    font-size: 1.4em;
+    line-height: 1.2;
+}
+
+div.flip-card-back-content > ul{
+    list-style-type: None;
+    text-align: center;
+    padding-left: 0;
+    font-size: 1.2em;
+    font-weight: 500
+}
+
+div.my_skills img {
+    width: 150px;
+    padding: 0;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-left: 20px */
+}
+
+
 
 
 /*Start tablet styles*/
@@ -455,6 +534,13 @@ img#logo {
     margin-top: 0px
 }
 
+
+
+/*Start tablet footer styles*/
+footer {
+    padding-left: 2em;
+    padding-right: 2em;
+}
 /* Case study detail pages  */    
 div.solution-grid {
     display: grid;
@@ -570,6 +656,15 @@ form input.btn_dark {
     margin-left: 50%;
 }
 }
+
+/*Tablet flip card layout*/
+
+div.my_skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
 /*End tablet styles*/
 
 
@@ -627,6 +722,7 @@ img#logo {
 
 nav {
     width: 60%;
+    max-width: 500px;
     align-self: flex-end;
     }
 
@@ -639,10 +735,6 @@ nav ul {
     margin-block-end: 0px;
 
 } 
-
-ul.nav_links {
-
-}
 
 
 
