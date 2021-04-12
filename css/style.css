@@ -383,14 +383,11 @@ div.persona-grid img{
 
 /* End case study details page */
 
-
-
-/*End about page skills section*/
-
 /*Start flip card styles*/
 
 div.my_skills {
-    display: grid
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 div.flip-card {
@@ -655,13 +652,12 @@ form input.btn_dark {
     padding: 10px 10px;
     margin-left: 50%;
 }
-}
 
 /*Tablet flip card layout*/
 
 div.my_skills {
-    display: grid;
     grid-template-columns: 1fr 1fr;
+}
 }
 
 
