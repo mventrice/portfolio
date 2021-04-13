@@ -135,6 +135,29 @@ h2 a {
     text-decoration: none
 }
 
+div.hero {
+    background-size:cover;
+    background-position:top;
+    background-attachment: fixed;
+    height: 400px;
+    clear: both;
+    position: static;
+}
+
+div#about {
+    background-image: url(../images/hero-stickies-web.jpg);
+}
+
+div#projects {
+    background-image: url(../images/hero-projects-web.jpg)
+}
+
+div#contact {
+    background-image: url(../images/hero-contact-web-resized.jpg);
+    background-position: bottom;
+}
+
+
 .btn_light{
     color: #fff;
     display: inline-block;
@@ -186,6 +209,7 @@ h2 a {
   /* Header and nav styles */
 header {
     position: fixed;
+    clear:both;
     background-color: #fff;
     width: 100%;
     /* padding-bottom: 1em; */
@@ -239,11 +263,17 @@ li.selected a {
 }
 
 
-#main-content {
+.main-container {
     position: relative;
-    top: 160px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
+
+.main-container-no-hero {
+    position: relative;
+    margin-bottom: 100px;
+    margin-top: 140px;
+}
+
 
   /*End Header and nav styles */
 
@@ -475,7 +505,7 @@ div.my_skills img {
 
 @media only screen and (min-width: 600px){
 
-#main-content {
+.main-container {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -484,7 +514,13 @@ div.my_skills img {
     margin-bottom: 200px */
 }
 
+.main-container-no-hero {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
 
+}
 /*Tablet header styles*/
 
 .nav_wrapper {
@@ -676,15 +712,38 @@ body{
     font-size:20px;
 }
 
-
-#main-content {
-    top: 200px;
+.main-container {
+    margin-top: 0;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 100px;
     /* clear: both;
     margin-bottom: 200px */
 }
+
+.main-container-no-hero {
+    margin-top: 160px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
+.showcase-container {
+    padding: 2em 0;
+    max-width: 1200px;
+}
+.text-container {
+    max-width: 780px;
+
+}
+
+div.hero {
+    height: 500px;
+}
+
+
 
 
 header {
@@ -765,7 +824,7 @@ div.intro-text {
     margin-bottom: 3em;
     margin-top: .5em;
     background-color: #C0D7D7;
-    max-width: 85%;
+    max-width: 800px;
 }
 
 div.intro-text > p {
@@ -806,7 +865,44 @@ div.gallery div:nth-child(even){
     padding: 1em;
     border-radius: 3px
 }
+
+/*Start desktop flip card layout*/
+div.my_skills {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+div.flip-card{
+    width: 260px;
+}
+div.flip-card h3 {
+    font-size: 1.2em;
+}
+
+div.flip-card li {
+    font-size: .9em;
+}
+
+
+/*Start desktop styles for Align content*/
+
+img.feature-image-1, img.feature-image-2, img.feature-image-3 {
+    max-height:500px;
+}
+.feature-text-1, .feature-text-2, .feature-text-3 {
+    align-self: center;
+    background-color: #f4f4f4;
+    padding: 2em;
+    border-radius: 3px
+}
+
+}
+
+
+
+/*End desktop styles*/
+
+
+/*Start reduced motion media queries*/
+
 
 @media (prefers-reduced-motion: reduce) {
     div.flip-card:hover .flip-card-inner,
