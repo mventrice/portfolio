@@ -407,7 +407,10 @@ div.flip-card-inner {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
 
-div.flip-card:hover div.flip-card-inner {
+div.flip-card:hover .flip-card-inner,
+div.flip-card:focus .flip-card-inner,
+div.flip-card:active .flip-card-inner,
+div.flip-card:focus-within .flip-card-inner {
     transform: rotateY(180deg);
   }
 
@@ -803,8 +806,63 @@ div.gallery div:nth-child(even){
     padding: 1em;
     border-radius: 3px
 }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    div.flip-card:hover .flip-card-inner,
+    div.flip-card:focus .flip-card-inner,
+    div.flip-card:active .flip-card-inner,
+    div.flip-card:focus-within .flip-card-inner  {
+    transform: rotateY(0deg);
+    }
+    div.flip-card {
+        perspective:unset;
+        height:auto;
+    } 
+    div.flip-card-inner {
+        position: static;
+        width: auto;
+        height: auto;
+        transform-style:unset;
+        transition: none;
+        transform-style:unset;
+    }
+    div.flip-card-front, div.flip-card-back {
+        -webkit-backface-visibility: visible;
+        backface-visibility: visible;
+        position: static;
+        height: auto;
+    }
+
+    div.flip-card-back {
+        transform:rotateY(0deg);
+    }
+    div.flip-card-front-content, div.flip-card-back-content {
+        padding: 1em 0
+    }
+
+  }
 
 
+
+  /* div.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform .5s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+
+  div.flip-card-front, div.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+   */
 
 
 
