@@ -501,9 +501,15 @@ div.my_skills img {
     /* margin-left: 20px */
 }
 
-/*Misc image styles*/
+/*Start modal*/
+.modal{
+display: none
+}
 
-/*End misc image styles*/
+/*End modal*/
+
+
+
 
 
 /*Start tablet styles*/
@@ -515,8 +521,6 @@ div.my_skills img {
     margin-left: auto;
     margin-right: auto;
     padding: 2em;
-    /* clear: both;
-    margin-bottom: 200px */
 }
 
 .main-container-no-hero {
@@ -714,7 +718,6 @@ div.my_skills {
 @media only screen and (min-width: 992px){
 
 body{
-    scroll-behavior: smooth;
     font-size:20px;
 }
 
@@ -919,6 +922,47 @@ div.hero {
     100% {border-bottom: 10px solid #AD035C};
 
 }
+
+/*Modal background */
+
+.persona-1, .persona-2, .persona-3{
+    cursor:pointer;
+}
+
+img.persona-1:hover, img.persona-2:hover, img.persona-3:hover {
+    opacity:80%;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    /* overflow: scroll; */
+    background-color: #ad035cd1
+}
+
+#persona-1-modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 100vh;
+}
+
+/* The Close Button */
+#close {
+    position: absolute;
+    top: 5 0px;
+    right: 100px;
+    color: #f1f1f1;
+    font-size: 80px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+  }
 
 }
 
