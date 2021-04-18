@@ -8,6 +8,11 @@ body{
     font-family: "Roboto", sans-serif;
 }
 
+*:focus{
+    outline: 2px solid #1160fb;
+	outline-offset: 2px;
+}
+
 main{
     padding:1em;
     line-height:1.5
@@ -949,18 +954,33 @@ img.persona-1:hover, img.persona-2:hover, img.persona-3:hover {
     margin: auto;
     display: block;
     max-width: 80%;
-    max-height: 100vh;
+    padding-top: 50px;
+    max-height: 90vh;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.5s;
+    animation-name: zoom;
+    animation-duration: 0.5s;
 }
 
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+
 /* The Close Button */
-#close-1 {
+.close {
     position: absolute;
     top: 5 0px;
-    right: 100px;
+    right: 80px;
     color: #f1f1f1;
     font-size: 80px;
     font-weight: bold;
-    transition: 0.3s;
+    transition: 1.3s;
     cursor: pointer;
   }
 
@@ -1015,26 +1035,6 @@ img.persona-1:hover, img.persona-2:hover, img.persona-3:hover {
 
   }
 
-
-
-  /* div.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform .5s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  }
-
-
-  div.flip-card-front, div.flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-   */
 
 
 
